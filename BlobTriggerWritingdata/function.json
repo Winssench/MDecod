@@ -7,13 +7,6 @@
       "direction": "in",
       "path": "iothub/{name}",
       "connection": "AzureWebJobsStorage"
-    },
-    {
-      "name": "outputblob",
-      "type": "blob",
-      "path": "images/{name}/{DateTime}.jpg",
-      "connection": "AzureWebJobsStorage",
-      "direction": "out"
     }
   ]
 }
