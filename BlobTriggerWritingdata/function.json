@@ -11,7 +11,7 @@
     {
       "name": "outputblob",
       "type": "blob",
-      "path": "images/{filename}/{DateTime}.jpg",
+      "path": "images/{name}/{DateTime}.jpg",
       "connection": "AzureWebJobsStorage",
       "direction": "out"
     }
