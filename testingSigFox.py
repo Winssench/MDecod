@@ -14,6 +14,9 @@ humidity = int(binMessage1[7:13], 2)
 pressure = int(binMessage1[13:20], 2) + 936
 
 
+print("id1", idbit1)
+print("id2", idbit2)
+
 
 
 hourVisits1 = [binMessage1[x:x+7] for x in range(20,len(binMessage1) - 6, 7)]
