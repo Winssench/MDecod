@@ -63,3 +63,5 @@ def main(myblob: func.InputStream):
 
     print("\nUploading to Azure Storage as blob:\n\t" + local_file_name)
     blob_client.upload_blob(imgdata)
+
+#https://storeageaccountteamcbn.blob.core.windows.net/pictures/ISHJCU67/2020-08-03T13:45:42Z.jpg
