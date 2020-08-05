@@ -2,9 +2,22 @@ import logging
 
 import azure.functions as func
 import os
+import pyodbc
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
+
+
+    '''
+    database conexion
+    '''            
+    server = 'teamconnectedbirdnest.database.windows.net'
+    database = 'Bird_Nest'
+    username = 'cbnAdmin@teamconnectedbirdnest'
+    password = 'Co(Bir)Nest*'
+    driver= '{SQL Server}'
+    cnxn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
+    print("conection succeful") 
 
     name = req.params.get('name')
     if not name:
